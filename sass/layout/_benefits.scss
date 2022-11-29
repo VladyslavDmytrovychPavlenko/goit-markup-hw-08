@@ -1,0 +1,75 @@
+.benefits {
+  @extend %section;
+}
+.benefits__caption {
+  @extend %visually-hidden;
+}
+.benefits__text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+}
+.benefits__title {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  text-transform: uppercase;
+  color: var(--secondary-text-color);
+  margin-bottom: 10px;
+
+  @media screen and (min-width: 768px) {
+    text-align: start;
+  }
+}
+.benefits__item::before {
+  display: flex;
+  content: "";
+  height: 120px;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-color: var(--background-color2);
+  margin-bottom: 30px;
+  border-radius: 4px;
+}
+.benefits__item:nth-child(1)::before {
+  background-image: url(../images/icon/antenna1.svg);
+}
+.benefits__item:nth-child(2)::before {
+  background-image: url(../images/icon/clock1.svg);
+}
+.benefits__item:nth-child(3)::before {
+  background-image: url(../images/icon/diagram1.svg);
+}
+.benefits__item:nth-child(4)::before {
+  background-image: url(../images/icon/astronaut1.svg);
+}
+// .benefits__item:not(:last-child) {
+//   margin-right: 30px;
+// }
+.benefits__list {
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+  @media screen and (min-width: 1200px) {
+    flex-wrap: nowrap;
+    align-items: normal;
+    gap: 30px;
+  }
+
+  @extend %list;
+}
+.benefits__item {
+  @media screen and (max-width: 767px) {
+    &:not(:nth-child(4n)) {
+      margin-bottom: 30px;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    width: 354px;
+  }
+  // min-width: 270px;
+}

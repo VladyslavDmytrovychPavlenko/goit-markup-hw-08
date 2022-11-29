@@ -1,0 +1,116 @@
+.main__portfolio {
+  background-color: var(--primary-bg-color);
+}
+.portfolio {
+  background-color: var(--text-color-1);
+  padding-top: 94px;
+  @extend %section;
+}
+.portfolio__title {
+  @extend %visually-hidden;
+}
+.mix__caption {
+  color: var(--secondary-text-color);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+  margin-bottom: 4px;
+}
+.mix__text {
+  color: var(--primary-text-color);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.87;
+}
+
+// mix
+
+.mix__list {
+  display: flex;
+  flex-wrap: wrap;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+  }
+
+  @extend %list;
+}
+.mix__list-item {
+  width: 370px;
+  background: var(--text-color-1);
+  transition: box-shadow 250ms var(--timing-function);
+
+  &:nth-last-child(-n + 3) {
+    margin-bottom: 0;
+  }
+
+  &:hover,
+  &:focus {
+    box-shadow: var(--box-shadov-mix__list);
+  }
+
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  @media screen and (min-width: 768px) {
+    width: 354px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 370px;
+  }
+}
+
+.item-list {
+  padding: 20px 24px;
+  border: 1px solid var(--border-color-port);
+  border-top: none;
+  flex-grow: 1;
+}
+.mix__list-link {
+  text-decoration: underline transparent;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.mix__list-face {
+  position: relative;
+  overflow: hidden;
+}
+.mix__list-item:hover .mix__overlay {
+  transform: translateY(0);
+  opacity: 1;
+}
+.mix__overlay {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: var(--overlay-backgroubd-color);
+  transform: translateY(100%);
+  transition: transform 250ms var(--timing-function),
+    opacity 250ms var(--timing-function);
+}
+.mix__overlay-text {
+  position: absolute;
+  top: 63px;
+  bottom: 63px;
+  left: 24px;
+  right: 24px;
+  font-size: 18px;
+  line-height: 1.56;
+  letter-spacing: 0.03em;
+  color: var(--primary-bg-color);
+
+  @media screen and (max-width: 479px) {
+    font-size: 16px;
+    top: 28px;
+  }
+}

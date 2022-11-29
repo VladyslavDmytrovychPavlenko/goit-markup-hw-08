@@ -1,0 +1,199 @@
+.page-footer {
+  background-color: var(--background-color1);
+  // padding-top: 60px;
+  // padding-bottom: 60px;
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+  }
+}
+.footer__container {
+  // display: flex;
+  // align-items: baseline;
+  // margin-left: auto;
+  // margin-right: auto;
+  // max-width: 1200px;
+  // padding-left: 15px;
+  // padding-right: 15px;
+
+  display: block;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @media screen and (min-width: 768px) and (max-width: 1199px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items: baseline;
+  }
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    align-items: baseline;
+    justify-content: center;
+    // padding-top: 65px;
+    // padding-bottom: 65px;
+  }
+}
+// лівий футер-контейнер
+.footer__box-left {
+  // display: block;
+  // width: 231px;
+  display: flex;
+  flex-direction: column;
+}
+.footer__contact-list {
+  @extend %list;
+
+  @media screen and (max-width: 1199px) {
+    text-align: center;
+    // margin-bottom: 60px;
+  }
+}
+.footer__item:not(:last-child) {
+  margin-bottom: 9px;
+}
+.adress__link--white {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  text-decoration: none;
+  margin-bottom: 9px;
+  transition: color 250ms var(--timing-function);
+  color: var(--text-color-1);
+  white-space: nowrap;
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+.adress__link {
+  color: var(--text-color-rgba);
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.71;
+  text-decoration: none;
+  transition: color 250ms var(--timing-function);
+
+  &:hover,
+  &:focus {
+    color: var(--accent-color);
+  }
+}
+/* центральний футер контейнер */
+
+.footer__box-midle {
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 70px;
+  }
+}
+.footer__midle-text {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+
+  color: var(--primary-bg-color);
+
+  @media screen and (min-width: 1200px) {
+    text-align: start;
+  }
+}
+
+.social__list-footer {
+  display: flex;
+  justify-content: center;
+  @extend %list;
+  // margin-bottom: 60px;
+
+  @media screen and (min-width: 1200px) {
+    margin-bottom: 0;
+  }
+}
+.social__link-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+  fill: var(--primary-bg-color);
+  transition: background-color 250ms var(--timing-function),
+    fill 250ms var(--timing-function);
+}
+
+.social__item-footer:not(:nth-child(4n)) {
+  margin-right: 10px;
+}
+.social__link-footer:hover,
+.social__link-footer:focus {
+  background-color: var(--accent-color);
+  fill: var(--primary-bg-color);
+}
+
+/* footer Підписка */
+.footer__box-right {
+  @media screen and (min-width: 1200px) {
+    display: flex;
+    flex-direction: column;
+    margin-left: 93px;
+  }
+
+  @media screen and (min-width: 768px) {
+    margin-top: 60px;
+  }
+}
+.footer__right-text {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: var(--primary-bg-color);
+  margin-bottom: 20px;
+
+  @media screen and (min-width: 1200px) {
+    text-align: start;
+  }
+}
+.footer__form {
+  @media screen and (min-width: 1200px) {
+    display: flex;
+  }
+}
+.footer__form-label {
+  @extend %visually-hidden;
+}
+.footer__form-input {
+  width: 100%;
+  max-height: 50px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.15));
+  border-radius: 4px;
+  background-color: #2f303a;
+  padding: 15px 16px;
+  color: rgba(255, 255, 255, 0.6);
+
+  margin-bottom: 20px;
+
+  @media screen and (min-width: 1200px) {
+    min-width: 358px;
+    max-height: 50px;
+    margin-bottom: 0;
+  }
+}
+.footer__form-input::placeholder {
+  color: rgba(255, 255, 255, 0.6);
+}
+.footer__modal-icon {
+  margin-left: 12px;
+  @media screen and (min-width: 1200px) {
+    margin-left: 10px;
+  }
+}

@@ -1,0 +1,106 @@
+.team {
+  background-color: var(--background-color2);
+
+  @extend %section;
+}
+.team__title {
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 1.17;
+  text-align: center;
+
+  margin-bottom: 30px;
+
+  @media screen and (min-width: 1200px) {
+    font-size: 36px;
+    line-height: 1.16;
+    margin-bottom: 50px;
+  }
+  color: var(--secondary-text-color);
+}
+.team__list {
+  background-color: var(--background-color2);
+  @media screen and (min-width: 768px) {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+  }
+  @media screen and (min-width: 1200px) {
+    flex-wrap: nowrap;
+    align-items: normal;
+  }
+  @extend %list;
+}
+.team__item {
+  display: block;
+  padding-bottom: 30px;
+  background-color: var(--text-color-1);
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+  border-radius: 0px 0px 4px 4px;
+
+  // &:not(:last-child) {
+  //   margin-right: 30px;
+  // }
+  @media screen and (min-width: 480px) {
+    width: 450px;
+  }
+  @media screen and (max-width: 767px) {
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+  @media screen and (min-width: 768px) {
+    width: 354px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 270px;
+  }
+}
+.team__name {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  color: var(--secondary-text-color);
+}
+.team__work {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+  margin-bottom: 16px;
+}
+.team__image {
+  margin-bottom: 30px;
+}
+.social__list {
+  display: flex;
+  justify-content: center;
+
+  @extend %list;
+}
+.social__link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  fill: var(--icon-grey-color);
+  transition: fill 250ms var(--timing-function),
+    background-color 250ms var(--timing-function);
+
+  &:hover,
+  &:focus {
+    background-color: var(--accent-color);
+    fill: var(--primary-bg-color);
+  }
+}
+.social__item:not(:nth-child(4n)) {
+  margin-right: 10px;
+}
