@@ -860,6 +860,11 @@ body {
     margin-bottom: 60px;
   }
 }
+@media screen and (min-width: 768px) {
+  .footer__box-left {
+    margin-bottom: 0;
+  }
+}
 
 @media screen and (max-width: 1199px) {
   .footer__contact-list {
@@ -905,6 +910,11 @@ body {
 @media screen and (min-width: 480px) {
   .footer__box-midle {
     margin-bottom: 60px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .footer__box-midle {
+    margin-bottom: 0;
   }
 }
 @media screen and (min-width: 1200px) {

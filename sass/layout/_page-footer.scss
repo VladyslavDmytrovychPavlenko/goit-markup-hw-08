@@ -42,6 +42,10 @@
   @media screen and (min-width: 480px) {
     margin-bottom: 60px;
   }
+
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0;
+  }
 }
 .footer__contact-list {
   @extend %list;
@@ -89,6 +93,9 @@
 .footer__box-midle {
   @media screen and (min-width: 480px) {
     margin-bottom: 60px;
+  }
+  @media screen and (min-width: 768px) {
+    margin-bottom: 0;
   }
   @media screen and (min-width: 1200px) {
     display: flex;
