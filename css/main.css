@@ -855,6 +855,11 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
 }
+@media screen and (min-width: 480px) {
+  .footer__box-left {
+    margin-bottom: 60px;
+  }
+}
 
 @media screen and (max-width: 1199px) {
   .footer__contact-list {
@@ -897,6 +902,11 @@ body {
 }
 
 /* центральний футер контейнер */
+@media screen and (min-width: 480px) {
+  .footer__box-midle {
+    margin-bottom: 60px;
+  }
+}
 @media screen and (min-width: 1200px) {
   .footer__box-midle {
     display: -webkit-box;

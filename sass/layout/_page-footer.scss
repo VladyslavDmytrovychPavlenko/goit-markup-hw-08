@@ -38,6 +38,10 @@
   // width: 231px;
   display: flex;
   flex-direction: column;
+
+  @media screen and (min-width: 480px) {
+    margin-bottom: 60px;
+  }
 }
 .footer__contact-list {
   @extend %list;
@@ -83,6 +87,9 @@
 /* центральний футер контейнер */
 
 .footer__box-midle {
+  @media screen and (min-width: 480px) {
+    margin-bottom: 60px;
+  }
   @media screen and (min-width: 1200px) {
     display: flex;
     flex-direction: column;
